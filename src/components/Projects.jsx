@@ -1,35 +1,58 @@
 import React from "react";
 
-function Projects() {
+const Projects = () => {
+  const projects = [
+    {
+      id: 1,
+      name: "Portfolio Website",
+      description: "A responsive portfolio showcasing my skills and projects.",
+      live: "https://gunjan-kosta.github.io/portfolio/",
+      image: "/images/portfolio.jpg", // thumbnail path
+    },
+    {
+      id: 2,
+      name: "Calculator Website",
+      description:
+        "An interactive calculator website built with React and Tailwind CSS.",
+      live: "https://gunjan-kosta.github.io/Calculator/",
+      image: "/images/calculator.jpg",
+    },
+    {
+      id: 3,
+      name: "Food Menu",
+      description:
+        "A food menu application built with Flutter, featuring various cuisines and dishes.",
+      live: "https://gunjan-kosta.github.io/Food-Menu/",
+      image: "/images/foodmenu.jpg",
+    },
+  ];
+
   return (
-    <section id="projects" className="card">
-      <h2>Projects</h2>
-      <div className="project-list">
-        <div className="project-card">
-          <h3>Random Number Guessing Game</h3>
-          <p>
-            Interactive console game providing hints while guessing a random
-            number.
-          </p>
-        </div>
-        <div className="project-card">
-          <h3>Portfolio Website</h3>
-          <p>Personal website showcasing resume, projects, and contact info.</p>
-        </div>
-        <div className="project-card">
-          <h3>Calculator Website</h3>
-          <p>Web-based calculator app with clean UI.</p>
-        </div>
-        <div className="project-card">
-          <h3>Food Menu</h3>
-          <p>
-            Responsive food menu website with categories like Main Course,
-            Chinese, Beverages, Desserts.
-          </p>
-        </div>
+    <section className="projects-section">
+      <h2 className="section-title">Projects</h2>
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <a
+            key={project.id}
+            href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-card"
+          >
+            <img
+              src={project.image}
+              alt={project.name}
+              className="project-thumbnail"
+            />
+            <div className="project-content">
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+            </div>
+          </a>
+        ))}
       </div>
     </section>
   );
-}
+};
 
 export default Projects;

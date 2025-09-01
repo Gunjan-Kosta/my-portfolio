@@ -16,7 +16,7 @@ function Contact() {
       </p>
       <p>
         GitHub:{" "}
-        <a href="https://github.com/Gunjan-kosta" target="_blank">
+        <a href="https://github.com/Gunjan-Kosta" target="_blank">
           github.com/GitHub
         </a>
       </p>

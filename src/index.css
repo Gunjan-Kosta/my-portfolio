@@ -327,3 +327,96 @@ body.light-theme .project-card:hover {
   transform: scale(1.08);
   filter: brightness(1.05);
 }
+
+/* Define theme variables */
+:root {
+  --bg-section: #f9f9f9;
+  --text-section: #111;
+  --card-bg: #fff;
+  --card-hover: #e0e0e0;
+  --card-text: #111;
+  --card-detail: #333;
+  --box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme {
+  --bg-section: #1a1a1a;
+  --text-section: #eee;
+  --card-bg: #272727;
+  --card-hover: #333;
+  --card-text: #fff;
+  --card-detail: #ccc;
+  --box-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Certifications Section */
+.certifications-section-wrapper {
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  background: var(--bg-section);
+  color: var(--text-section);
+  transition: background 0.3s, color 0.3s;
+}
+
+.certifications-box {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px var(--box-shadow);
+  max-width: 1000px;
+  width: 100%;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.certifications-box h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.certifications-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cert-card {
+  background: var(--card-bg);
+  color: var(--card-text);
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 250px;
+  border: 1px solid #1e90ff; /* thin blue border */
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s,
+    border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cert-detail {
+  font-size: 0.85rem;
+  color: var(--card-detail);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.cert-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px var(--box-shadow);
+  background: var(--card-hover);
+  /* border-color: #3399ff; slightly brighter blue on hover */
+}
+.cert-card:hover .cert-detail {
+  max-height: 100px;
+  opacity: 1;
+}

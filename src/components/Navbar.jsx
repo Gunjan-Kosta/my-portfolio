@@ -12,7 +12,7 @@ function Navbar({ theme, setTheme }) {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${theme}`}>
       <h1 className="logo">Gunjan Kosta</h1>
 
       {/* Desktop Menu */}
@@ -73,8 +73,15 @@ function Navbar({ theme, setTheme }) {
         >
           {theme === "dark" ? "🌞" : "🌙"}
         </button>
-        <button className="hamburger" onClick={toggleMenu} aria-label="Menu">
-          ☰
+
+        <button
+          className={`hamburger ${menuOpen ? "open" : ""} ${theme}`}
+          onClick={toggleMenu}
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
     </nav>

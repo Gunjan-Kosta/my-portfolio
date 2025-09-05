@@ -588,56 +588,358 @@ body.dark-theme {
   padding: 4rem 2rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: var(--bg-section);
-  color: var(--text-section);
-  transition: background 0.3s, color 0.3s;
 }
 
-.about-container {
-  display: flex;
-  gap: 2rem;
+.about-card {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   max-width: 900px;
-  flex-wrap: wrap;
-  align-items: center;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.about-content {
-  flex: 1;
-  min-width: 300px;
+.about-card:hover {
+  transform: translateY(-5px);
 }
 
 .about-content h2 {
-  text-align: center;
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
 }
 
 .about-content p {
   margin-bottom: 1rem;
   line-height: 1.6;
-  font-size: 1rem;
+  color: var(--text-color);
 }
 
 .about-highlights {
+  margin: 1.5rem 0;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  gap: 12px;
 }
 
 .highlight-badge {
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  background: var(--card-bg);
-  box-shadow: 0 4px 12px var(--box-shadow);
+  background: linear-gradient(135deg, #1e90ff, #0072ff);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
   font-size: 0.9rem;
-  font-weight: 500;
-  transition: transform 0.3s, background 0.3s;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(30, 144, 255, 0.4);
+  transition: all 0.3s ease;
 }
 
 .highlight-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 114, 255, 0.6);
+}
+
+/* ========================= */
+/* RESUME BUTTON (Centered + Blink) */
+/* ========================= */
+.resume-btn-wrapper {
+  margin-top: 2rem;
+  text-align: center; /* centers the button */
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #1e90ff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(30, 144, 255, 0.4);
+  transition: all 0.3s ease-in-out;
+  animation: blinkEffect 1.8s infinite; /* blink effect */
+}
+
+.resume-btn:hover {
+  background: #0072ff;
   transform: translateY(-3px);
-  background: var(--card-hover);
+  box-shadow: 0 8px 20px rgba(0, 114, 255, 0.5);
+}
+
+/* Blink animation */
+@keyframes blinkEffect {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ========================= */
+/* SKILLS SECTION */
+/* ========================= */
+.skills-section {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.skills-card {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+}
+
+.skills-title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.skills-category {
+  margin-bottom: 2.5rem;
+}
+
+.skills-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--highlight-color);
+}
+
+/* Badges */
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.skill-badge {
+  background: linear-gradient(135deg, #1e90ff, #0072ff);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: default;
+  box-shadow: 0 4px 10px rgba(30, 144, 255, 0.4);
+}
+
+/* Hover / Attractive effect */
+.skill-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 114, 255, 0.6);
+  background: linear-gradient(135deg, #0072ff, #1e90ff);
+}
+
+/* ================= EXPERIENCE TIMELINE ================= */
+.experience-section {
+  margin: 50px auto;
+  padding: 40px;
+  max-width: 900px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  box-shadow: 0 6px 20px var(--box-shadow);
+  text-align: left;
+}
+
+.experience-section h2 {
+  text-align: center;
+  color: #00aaff;
+  margin-bottom: 30px;
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  margin: 0;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 4px;
+  height: 100%;
+  background: #00aaff;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.timeline-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.timeline-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  position: absolute;
+  left: -3px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: #00aaff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 170, 255, 0.6);
+}
+
+/* Timeline Content */
+.timeline-content {
+  background: var(--card-bg);
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px solid #00aaff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content h3 {
+  color: #00aaff;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  font-size: 0.9rem;
+  color: var(--text-section);
+  margin-bottom: 10px;
+}
+
+.timeline-content ul {
+  margin-left: 18px;
+  color: var(--card-detail);
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--box-shadow);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============= HIGHLIGHTED SECTIONS (Reusable) ============= */
+.highlighted-section {
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  background: var(--bg-section);
+  color: var(--text-section);
+  transition: background 0.3s, color 0.3s;
+}
+
+.experience-container {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px var(--box-shadow);
+  max-width: 1000px;
+  width: 100%;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.experience-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e90ff;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.experience-container h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #1e90ff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Highlighted Education Section */
+.education-section {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.education-container {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px var(--box-shadow);
+  max-width: 1000px;
+  width: 100%;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.education-container:hover {
+  box-shadow: 0 15px 40px var(--hover-shadow);
+}
+
+.edu-card {
+  background: var(--card-inner-bg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--hover-shadow);
+}
+
+.edu-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--highlight-color);
+}
+
+.edu-card p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
 }

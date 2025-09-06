@@ -897,6 +897,7 @@ body.dark-theme {
 }
 
 /* Highlighted Education Section */
+/* Education Section */
 .education-section {
   padding: 4rem 2rem;
   display: flex;
@@ -904,13 +905,18 @@ body.dark-theme {
   align-items: center;
   text-align: left;
 }
+.section-title {
+  text-align: center;
+  padding-bottom: 5%;
+  font-size: 2rem;
+}
 
 .education-container {
   background: var(--card-bg);
   padding: 2.5rem;
   border-radius: 16px;
   box-shadow: 0 12px 35px var(--box-shadow);
-  max-width: 1000px;
+  max-width: 900px;
   width: 100%;
   transition: background 0.3s, box-shadow 0.3s;
 }
@@ -921,25 +927,49 @@ body.dark-theme {
 
 .edu-card {
   background: var(--card-inner-bg);
-  padding: 1.5rem;
+  padding: 1.8rem;
   margin-bottom: 1.5rem;
   border-radius: 12px;
-  border: 1px solid var(--border-color);
+  border: 0.09px solid var(--border-color);
+  border: 0.09px solid #41a0fe; /* Thin blue line highlight */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .edu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px var(--hover-shadow);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px var(--hover-shadow);
+  border: 1.5px solid #0078e7; /* Darker blue on hover */
 }
 
 .edu-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+  color: white; /* professional white heading */
+}
+
+.edu-institute {
+  font-size: 1rem;
+  font-weight: 500;
   color: var(--highlight-color);
+  margin-bottom: 0.2rem;
+}
+
+.edu-duration {
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 0.6rem;
+  color: #bbb;
 }
 
 .edu-card p {
   margin: 0.3rem 0;
   font-size: 1rem;
+}
+
+/* Education Section Icons */
+.edu-icon {
+  margin-right: 8px;
+  color: var(--highlight-color);
+  vertical-align: middle;
+  font-size: 1.3rem;
 }

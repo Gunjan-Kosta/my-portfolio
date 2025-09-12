@@ -9,7 +9,7 @@ function About() {
         <div className="about-content">
           <h2>About Me</h2>
           <p>
-            I’m <span className="highlight">Gunjan Kosta</span>, a passionate{" "}
+            I’m <span className="highlight">GUNJAN KOSTA</span>, a passionate{" "}
             <b>Full-Stack Developer</b> who loves building interactive,
             scalable, and user-friendly web & mobile applications.
           </p>

@@ -42,7 +42,7 @@ function Skills() {
           <h3>Soft Skills</h3>
           <div className="skills-badges">
             {softSkills.map((skill, index) => (
-              <span key={index} className="skill-badge">
+              <span key={index} className="skill-badge soft">
                 {skill}
               </span>
             ))}

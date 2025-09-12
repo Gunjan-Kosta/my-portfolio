@@ -4,8 +4,8 @@ import "/src/index.css";
 function Experience() {
   return (
     <section id="experience" className="highlighted-section">
-      <div className="experience-container">
-        <h2 style={{ color: "white" }}>Work Experience</h2>
+      <div className="experience-card">
+        <h2>Work Experience</h2>
 
         <div className="timeline">
           {/* Cognifyz Technologies */}

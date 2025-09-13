@@ -1,12 +1,94 @@
-# React + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my **personal portfolio website** built using **React.js** and **Vite** ⚡.  
+It highlights my **projects, skills, education, certifications, and work experience**, while also providing an easy way to contact me.
 
-Currently, two official plugins are available:
+The design is **simple, professional, responsive**, and supports **light/dark themes**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🎨 **Light & Dark Theme Support** (CSS variables)
+- 🏠 **Home Section** with an introduction
+- 📚 **Education & Experience Sections** in clean cards
+- 💼 **Projects Section** with clickable cards & thumbnails
+- 📜 **Certifications Section** with expandable certificate previews
+- 🛠 **Skills Section** with categorized tech stack
+- ✉️ **Contact Form** with direct email integration
+- ⬆️ **Back to Top Button** for smooth navigation
+- 📱 **Responsive UI** for desktop, tablet, and mobile
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js (with Vite)
+- **Styling:** CSS (custom themes, card layout)
+- **Email Service:** EmailJS
+- **Deployment:** GitHub Pages
+
+---
+
+## 📂 Project Structure
+
+portfolio/
+├── public/ # Images, certificates, etc.
+├── src/
+│ ├── assets/
+│ ├── components/ # Website sections
+│ │ ├── About.jsx
+│ │ ├── Certifications.jsx
+│ │ ├── Contact.jsx
+│ │ ├── Education.jsx
+│ │ ├── Experience.jsx
+│ │ ├── Footer.jsx
+│ │ ├── Home.jsx
+│ │ ├── Navbar.jsx
+│ │ ├── Projects.jsx
+│ │ ├── Skills.jsx
+│ ├── App.css
+│ ├── App.jsx
+│ ├── index.css
+│ ├── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+
+---
+
+## ⚙️ Installation & Setup
+
+1. Clone the repository
+   ```bash
+   git clone https://gunjan-kosta.github.io/my-portfolio/
+   cd portfolio
+   ```
+2. npm install
+3. npm run dev
+
+📸 Screenshots
+![screen1](image.png)
+![about](image-1.png)
+![skills](image-2.png)
+![experience](image-3.png)
+![education](image-4.png)
+![projects](image-5.png)
+![certifications](image-6.png)
+![contact](image-7.png)
+![footer](image-8.png)
+
+📬 Contact
+
+📧 You can reach me directly via the Contact Form on the website
+or at gunjan.kosta2023@gmail.com
+
+📄 License
+
+This project is licensed under the MIT License.
+
+Made with ❤️ by Gunjan Kosta

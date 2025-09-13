@@ -13,7 +13,7 @@ function Certifications() {
     },
     {
       name: "Cambridge Upskill English Certificate - Mar 2025",
-      file: "/public/images/cambridge.jpg",
+      file: "/public/images/eng1.jpg",
       detail:
         "Certificate showcasing proficiency in English language and communication skills.",
     },
@@ -25,31 +25,31 @@ function Certifications() {
     },
     {
       name: "Java (Basics) - HackerRank | Mar 2025",
-      file: "/public/images/java.jpg",
+      file: "/public/images/Java(Basics).jpg",
       detail:
         "Basic Java programming skills validated by HackerRank assessment.",
     },
     {
       name: "SQL (Basics) - HackerRank | Mar 2025",
-      file: "/public/images/sql.jpg",
+      file: "/public/images/sql(basic).jpg",
       detail:
         "SQL querying skills from basic to intermediate, verified by HackerRank.",
     },
     {
       name: "SQL (Intermediate) - HackerRank | Mar 2025",
-      file: "/public/images/sql.jpg",
+      file: "/public/images/sql(intermediate).jpg",
       detail:
         "SQL querying skills from basic to intermediate, verified by HackerRank.",
     },
     {
       name: "Vocational Training on Flutter Development - Completion Certificate",
-      file: "/public/images/flutter-vocational.jpg",
+      file: "/public/images/vt.jpg",
       detail:
         "Completed a vocational training program focused on Flutter app development.",
     },
     {
       name: "Web Development Course - Udemy | Completion Certificate",
-      file: "/public/images/webdev-udemy.jpg",
+      file: "/public/images/Web Dev Certificate.jpg",
       detail:
         "Comprehensive Udemy course on full-stack web development covering HTML, CSS, JavaScript, React, Node.js, and databases.",
     },

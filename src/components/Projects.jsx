@@ -5,15 +5,15 @@ const Projects = () => {
     {
       id: 1,
       name: "Portfolio Website",
-      description: "A responsive portfolio showcasing my skills and projects.",
+      description:
+        "A responsive portfolio with HTML, CSS and JS, showcasing my skills and basic projects.",
       live: "https://gunjan-kosta.github.io/portfolio/",
       image: "/images/portfolio.jpg", // thumbnail path
     },
     {
       id: 2,
       name: "Calculator Website",
-      description:
-        "An interactive calculator website built with React and Tailwind CSS.",
+      description: "An interactive calculator website built with HTML and CSS.",
       live: "https://gunjan-kosta.github.io/Calculator/",
       image: "/images/calculator.jpg",
     },
@@ -21,7 +21,7 @@ const Projects = () => {
       id: 3,
       name: "Food Menu",
       description:
-        "A food menu application built with Flutter, featuring various cuisines and dishes.",
+        "A food menu application built with HTML and CSS, featuring various cuisines and dishes.",
       live: "https://gunjan-kosta.github.io/Food-Menu/",
       image: "/images/foodmenu.jpg",
     },

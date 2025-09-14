@@ -1,0 +1,45 @@
+name: Deploy Portfolio to GitHub Pages
+
+# 🚀 Run workflow on every push to main branch
+on:
+  push:
+    branches:
+      - main # change to "master" if your repo uses master as default
+
+# 👷 Define the jobs
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout repo
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2️⃣ Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 # you can use 16, 18, or 20 depending on your project
+
+      # 3️⃣ Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4️⃣ Build the project
+      - name: Build project
+        run: npm run build
+
+      # 5️⃣ Upload artifact (optional, helps debugging build output)
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v3
+        with:
+          name: production-files
+          path: ./dist
+
+      # 6️⃣ Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

@@ -1,12 +1,13 @@
 import React from "react";
 import "/src/index.css";
+import profilePic from "/images/profile.jpg";
 
 function Home() {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
         {/* Profile Image */}
-        <img src="/images/profile.jpg" alt="My Profile" className="hero-pic" />
+        <img src={profilePic} alt="My Profile" className="hero-pic" />
 
         <h1>
           Hello, I'm <span className="highlight">GUNJAN KOSTA</span>

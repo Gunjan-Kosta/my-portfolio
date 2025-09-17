@@ -65,7 +65,7 @@ portfolio/
 
 1. Clone the repository
    ```bash
-   git clone https://gunjan-kosta.github.io/my-portfolio/
+   git clone https://gunjan-kosta.github.io/portfolio-site/
    cd portfolio
    ```
 2. npm install

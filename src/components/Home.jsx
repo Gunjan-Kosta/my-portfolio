@@ -6,7 +6,8 @@ function Home() {
     <section id="home" className="hero">
       <div className="hero-content">
         {/* Profile Image */}
-        src={`${import.meta.env.BASE_URL}images/profile.jpg`}
+        <img src="./profile.jpg" alt="My Profile" className="hero-pic" />
+
         <h1>
           Hello, I'm <span className="highlight">GUNJAN KOSTA</span>
         </h1>
@@ -15,11 +16,13 @@ function Home() {
           I love building modern, interactive, and user-friendly web & mobile
           apps.
         </p>
+
         {/* Freelance Availability Line */}
         <p className="freelance-line">
           📢 I am open to freelance opportunities. Let’s build something amazing
           together!
         </p>
+
         {/* Scroll Down Gesture */}
         <div className="scroll-down">
           <span></span>

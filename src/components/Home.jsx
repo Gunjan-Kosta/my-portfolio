@@ -6,7 +6,11 @@ function Home() {
     <section id="home" className="hero">
       <div className="hero-content">
         {/* Profile Image */}
-        <img src="./profile.jpg" alt="My Profile" className="hero-pic" />
+        <img
+          src="/public/images/profile.jpg"
+          alt="My Profile"
+          className="hero-pic"
+        />
 
         <h1>
           Hello, I'm <span className="highlight">GUNJAN KOSTA</span>

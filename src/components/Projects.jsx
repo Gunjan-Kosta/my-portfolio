@@ -8,14 +8,14 @@ const Projects = () => {
       description:
         "A responsive portfolio with HTML, CSS and JS, showcasing my skills and basic projects.",
       live: "https://gunjan-kosta.github.io/portfolio/",
-      image: "public/images/portfolio.jpg", // thumbnail path
+      image: "images/portfolio.jpg", // thumbnail path
     },
     {
       id: 2,
       name: "Calculator Website",
       description: "An interactive calculator website built with HTML and CSS.",
       live: "https://gunjan-kosta.github.io/Calculator/",
-      image: "public/images/calculator.jpg",
+      image: "images/calculator.jpg",
     },
     {
       id: 3,
@@ -23,7 +23,7 @@ const Projects = () => {
       description:
         "A food menu application built with HTML and CSS, featuring various cuisines and dishes.",
       live: "https://gunjan-kosta.github.io/Food-Menu/",
-      image: "public/images/foodmenu.jpg",
+      image: "images/foodmenu.jpg",
     },
   ];
 

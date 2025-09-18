@@ -7,7 +7,7 @@ function Home() {
       <div className="hero-content">
         {/* Profile Image */}
         <img
-          src="./public/images/profile.jpg"
+          src="./../../public/images/profile.jpg"
           alt="My Profile"
           className="hero-pic"
         />

@@ -30,7 +30,7 @@ function About() {
           {/* Download Resume Button */}
           <div className="resume-btn-wrapper">
             <a
-              href="/public/images/GUNJAN KOSTA Resume.pdf"
+              href="images/GUNJAN KOSTA Resume.pdf"
               download="Gunjan_Kosta_Resume.pdf"
               className="resume-btn"
             >

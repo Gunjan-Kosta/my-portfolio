@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "/src/index.css"; // make sure you have styles (I'll give below)
 
 function Navbar({ theme, setTheme }) {
@@ -31,28 +32,35 @@ function Navbar({ theme, setTheme }) {
       {/* Menu links */}
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li>
-          <a href="#home">Home</a>
+          <Link to="/" onClick={toggleMenu}>
+            Home
+          </Link>
         </li>
         <li>
-          <a href="#about">About</a>
+          <Link to="/about" onClick={toggleMenu}>
+            About
+          </Link>
         </li>
         <li>
-          <a href="#projects">Projects</a>
+          <Link to="/projects" onClick={toggleMenu}>
+            Projects
+          </Link>
         </li>
         <li>
-          <a href="#experience">Experience</a>
+          <Link to="/experience" onClick={toggleMenu}>
+            Experience
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/certifications" onClick={toggleMenu}>
+            Certifications
+          </Link>
         </li>
         <li>
-          <a href="#education">Education</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#certifications">Certifications</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
+          <Link to="/contact" onClick={toggleMenu}>
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>

@@ -42,13 +42,13 @@ function Certifications() {
         "SQL querying skills from basic to intermediate, verified by HackerRank.",
     },
     {
-      name: "Vocational Training on Flutter Development - Completion Certificate",
+      name: "Vocational Training on Flutter Development",
       file: "images/vt.jpg",
       detail:
         "Completed a vocational training program focused on Flutter app development.",
     },
     {
-      name: "Web Development Course - Udemy | Completion Certificate",
+      name: "Web Development Course - Udemy",
       file: "images/Web Dev Certificate.jpg",
       detail:
         "Comprehensive Udemy course on full-stack web development covering HTML, CSS, JavaScript, React, Node.js, and databases.",
@@ -60,27 +60,73 @@ function Certifications() {
   };
 
   return (
-    <section id="certifications" className="certifications-section-wrapper">
-      <div className="certifications-box">
-        <h2>Certifications</h2>
-        <div className="certifications-container">
+    <section id="certifications">
+      <div style={{ maxWidth: "1200px", margin: "0 auto", width: "100%" }}>
+        <h2
+          style={{
+            textAlign: "center",
+            marginBottom: "3rem",
+            fontSize: "2.5rem",
+            fontWeight: "700",
+          }}
+        >
+          Certifications
+        </h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "2rem",
+          }}
+        >
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className={`cert-card ${
-                expandedIndex === index ? "expanded" : ""
-              }`}
+              className="certification-card"
               onClick={() => toggleExpand(index)}
+              style={{
+                cursor: "pointer",
+                display: "flex",
+                flexDirection: "column",
+                height: "100%",
+              }}
             >
-              <h3>{cert.name}</h3>
-              <p className="cert-detail">{cert.detail}</p>
+              <h3 style={{ marginBottom: "1rem", fontSize: "1.2rem" }}>
+                {cert.name}
+              </h3>
+              <p
+                style={{
+                  color: "var(--text-alt)",
+                  fontSize: "0.95rem",
+                  flex: 1,
+                }}
+              >
+                {cert.detail}
+              </p>
+
+              <div
+                style={{
+                  marginTop: "1.5rem",
+                  fontSize: "0.9rem",
+                  color: "var(--primary)",
+                }}
+              >
+                {expandedIndex === index
+                  ? "Click to close"
+                  : "Click to view certificate"}
+              </div>
 
               {expandedIndex === index && (
-                <div className="certificate-viewer">
+                <div style={{ marginTop: "1rem" }}>
                   <img
                     src={cert.file}
                     alt={cert.name}
-                    className="certificate-image"
+                    style={{
+                      width: "100%",
+                      borderRadius: "8px",
+                      border: "1px solid var(--card-border)",
+                    }}
                   />
                 </div>
               )}

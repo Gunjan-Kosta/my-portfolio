@@ -33,23 +33,29 @@ const Projects = () => {
         <h2 className="section-title">Projects</h2>
         <div className="projects-grid">
           {projects.map((project) => (
-            <a
-              key={project.id}
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-card"
-            >
-              <img
-                src={project.image}
-                alt={project.name}
-                className="project-thumbnail"
-              />
+            <div key={project.id} className="project-card">
+              <div className="card-image-wrapper">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="project-thumbnail"
+                />
+              </div>
               <div className="project-content">
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
+                <div className="project-links">
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn project-btn"
+                  >
+                    View Project
+                  </a>
+                </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

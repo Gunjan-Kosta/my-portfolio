@@ -21,7 +21,7 @@ function Experience() {
           <div className="experience-card">
             <h3>💻 Omnexia Technology</h3>
             <p style={{ color: "var(--text-alt)", marginBottom: "1rem" }}>
-              <em>Frontend Intern | Dec 2025 - Present</em>
+              <em>Frontend Intern | Dec 2025 - Apr 2026</em>
             </p>
             <ul style={{ textAlign: "left", paddingLeft: "1.5rem" }}>
               <li>
